@@ -19,7 +19,7 @@ $(document).ready(function () {
             $('.plus, .minus').hide();
             $('#break, #session').css('padding-left','15px');
 
-            var timerCounter = setInterval(sessionTimer, 10);
+            var timerCounter = setInterval(sessionTimer, 1000);
             btnSound.play();
             sessionNum*=60;
             breakNum*=60;
@@ -30,7 +30,7 @@ $(document).ready(function () {
                     beep.play();
                     clearInterval(timerCounter);
                     timerStatus.text('Finished');
-                    var startBreakTimer = setInterval(breakTimer, 10);
+                    var startBreakTimer = setInterval(breakTimer, 1000);
                 }
                 if(sessionNum%60>=10){
                     $('#counter').html(Math.floor(sessionNum/60)+':'+sessionNum%60);
