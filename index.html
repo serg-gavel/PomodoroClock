@@ -9,6 +9,8 @@
     <base target="_blank">
 </head>
 <body>
+<audio src="audio/beep.mp3" id="beep"></audio>
+<audio src="audio/button.mp3" id="sound"></audio>
 <div class="container">
     <div class="row">
         <header class="col-md-12">
@@ -25,32 +27,30 @@
                         <div class="break">
                             <h6></h6>
                             <div class="inner">
-                                <span class="minus">&minus; </span><span class="break-counter">0</span><span class="plus"> &plus;</span>
+                                <span class="minus" id="break-minus">&minus; </span><span id="break">5</span><span class="plus" id="break-plus"> &plus;</span>
                             </div>
                         </div>
                         <div class="session">
                             <h6></h6>
                             <div class="inner">
-                                <span class="minus">&minus; </span><span class="session-counter">0</span><span class="plus"> &plus;</span>
+                                <span class="minus" id="session-minus">&minus; </span><span id="session">25</span><span class="plus" id="session-plus"> &plus;</span>
                             </div>
                         </div>
                     </div>
-                    <div class="timer-body">
+                    <div class="timer-body" id="start-timer">
                         <div class="timer-status">
                             <h6>Session</h6>
-                            <span class="session-length">0</span>
-                            <span class="break-length"></span>
+                            <span id="counter">25</span>
                         </div>
                     </div>
-                    <div class="timer-body-mask"></div>
-
+                    <div class="button-space">
+                        <button id="reset-button">Reset</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-
-
 <footer class="footer">
     <div class="container">
         <div class="row justify-content-center">
